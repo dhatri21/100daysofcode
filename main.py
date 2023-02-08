@@ -1,21 +1,91 @@
-#1. Create a greeting for your program.
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
 
-#2. Ask the user for the city that they grew up in.
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
 
-#3. Ask the user for the name of a pet.
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
 
-#4. Combine the name of their city and pet and show them their band name.
+#Write your code below this line 👇
 
-#5. Make sure the input cursor shows on a new line:
+choice = random.randint(0,2)
 
-# Solution: https://replit.com/@appbrewery/band-name-generator-end
+user_choice = (input("What do you choose? rock,paper or scissors?")).lower()
 
+computer_choice = "hello"
 
-print("Need a super name for your super band? You are at a right place!")
+if (choice == 0): 
+  computer_choice = "rock"
 
-city = input("Which city are you grew up in? ")
+elif (choice == 1):
+  computer_choice = "paper"
 
-pet = input("What is the name of your pet? ")
+else:
+  computer_choice = "scissors"
 
-print("Your band name is " + city + " " + pet + "!")
+if(computer_choice == user_choice): 
+  print("Its a Tie...Try again...")
 
+elif(computer_choice=="rock" and user_choice=="paper"):
+  print("You choose")
+  print(paper)
+  print("computer choose")
+  print(rock)
+  print("You won!")
+
+elif(computer_choice=="rock" and user_choice=="scissor"):
+  print("You choose")
+  print(scissors)
+  print("computer choose")
+  print(rock)
+  print("Computer won!")
+
+elif(computer_choice=="paper" and user_choice=="scissor"):
+  print("You choose")
+  print(scissors)
+  print("computer choose")
+  print(paper)
+  print("You won!")
+
+elif(computer_choice=="paper" and user_choice=="rock"):
+  print("You choose")
+  print(rock)
+  print("computer choose")
+  print(paper)
+  print("Computer won!")
+
+elif(computer_choice=="scissor" and user_choice=="rock"):
+  print("You choose")
+  print(rock)
+  print("computer choose")
+  print(scissors)
+  print("You won!")
+
+elif(computer_choice=="scissor" and user_choice=="paper"):
+  print("You choose")
+  print(paper)
+  print("computer choose")
+  print(scissors)
+  print("Computer won!")
+else:
+  print("Input is incorrect")
